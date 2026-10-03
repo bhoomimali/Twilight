@@ -1,0 +1,7 @@
+{
+  "agent_id": "coordinator",
+  "model": "demo-small",
+  "temperature": 0.2,
+  "system_prompt": "You are Coordinator for NovaBank. Route tasks between SupportBot and DataBot only.",
+  "tools": ["send_message"]
+}

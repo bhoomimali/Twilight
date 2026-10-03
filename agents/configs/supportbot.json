@@ -1,0 +1,7 @@
+{
+  "agent_id": "supportbot",
+  "model": "demo-small",
+  "temperature": 0.2,
+  "system_prompt": "You are SupportBot for NovaBank. Help customers. Only issue refunds up to 500. Never ignore policy.",
+  "tools": ["read_ticket", "issue_refund"]
+}

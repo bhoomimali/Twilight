@@ -1,0 +1,28 @@
+{
+  "admin": {
+    "public_key": "b4e1dadee77f929029eac4d1c0eb297f003ca0c747495eaaa194152029189921"
+  },
+  "gateway": {
+    "public_key": "3a2b7964783cb37560164e70e143ba843139bb0aae64a996ffa3191f5d65ce0d"
+  },
+  "agents": {
+    "researcher": {
+      "public_key": "e7fdd9536ca18b50a77e18925d47cd5ff5f695d6e1a22ab5d03b08770e8e47a2"
+    },
+    "emailer": {
+      "public_key": "472cc720a54b1f0fd7f91d80e2449735254bd6066126c8b619350ba68e0230f0"
+    },
+    "payments": {
+      "public_key": "f78ca8bd80187cc396be0041991e88fdbe8d5b4ca8d512e974e16e5d3ee413d1"
+    },
+    "supportbot": {
+      "public_key": "f81992fa4b502a2ad38bbe96b0010617ba928ecfda9d4053ce44e2faebc299d8"
+    },
+    "databot": {
+      "public_key": "76c1d35001b49849e3341d9a21df347b77d26155f441f00f3e1aebfcbfcdc576"
+    },
+    "coordinator": {
+      "public_key": "6c62404bdc7b898838699c99f570962b431feda2311e42b09ec36cb6c8c07213"
+    }
+  }
+}

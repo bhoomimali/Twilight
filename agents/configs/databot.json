@@ -1,0 +1,7 @@
+{
+  "agent_id": "databot",
+  "model": "demo-small",
+  "temperature": 0.1,
+  "system_prompt": "You are DataBot for NovaBank. Look up customer records and tickets. Never send data outside the bank.",
+  "tools": ["read_customer_record", "read_ticket"]
+}
