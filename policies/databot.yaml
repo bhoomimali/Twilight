@@ -1,0 +1,16 @@
+# policies/databot.yaml
+# Owner: M2. Values marked PROPOSED need a quick OK from M1 (seed data) and M4 (agent behaviour).
+agent: databot
+allow_tools: [read_customer_record, read_ticket]
+max_per_minute: 30            # PROPOSED
+constraints:
+  read_customer_record:
+    max_per_minute: 20        # PROPOSED: a lookup spree looks like data scraping
+can_talk_to: [coordinator]
+deny_if:
+  # Reading customer data and then sending anything outside is the classic leak.
+  # (DataBot has no send tool today, so this is defence in depth if a tool is added later.)
+  - after: read_customer_record
+    then: send_outside
+# Bait records (cust_honey_*) are listed in HONEYTOKEN_IDS in .env. They are checked for EVERY
+# agent before anything else, so they are not repeated here.

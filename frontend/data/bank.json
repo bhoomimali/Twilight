@@ -1,0 +1,23 @@
+{
+  "bank_name": "Twinity Bank",
+  "tagline": "A secure, modern banking network connecting customer wallets, cards, and financial operations across India.",
+  "currency": "INR",
+  "currency_symbol": "₹",
+  "ledger_balance": 1268040,
+  "ledger_balance_formatted": "₹12,68,040.00",
+  "active_customers": 1284,
+  "volume_today": 842920,
+  "volume_today_formatted": "₹8,42,920",
+  "volume_change_pct": 12.1,
+  "transactions_today": 342,
+  "uptime_pct": 99.99,
+  "managed_aum": "₹12.68L",
+  "pending_approvals": 2,
+  "guard_mode": "off",
+  "office": "Bengaluru, Karnataka",
+  "bank_code": "TWIN0001204",
+  "total_deposits": "₹248.6 Cr",
+  "gross_advances": "₹182.4 Cr",
+  "capital_adequacy": "17.8%",
+  "npa_ratio": "1.42%"
+}

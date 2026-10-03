@@ -1,0 +1,7 @@
+[
+  { "id": "supportbot", "name": "SupportBot", "role": "Customer Support", "trust": 96, "status": "HEALTHY", "color": "#22C55E", "working": "Resolving card dispute", "tools": ["read_ticket", "issue_refund"], "actions_today": 842, "latency_ms": 180, "approved_tools": 12 },
+  { "id": "databot", "name": "DataBot", "role": "Data Operations", "trust": 72, "status": "FLAGGED", "color": "#F59E0B", "working": "Customer lookups", "tools": ["read_customer_record", "read_ticket"], "actions_today": 410, "latency_ms": 95, "approved_tools": 8 },
+  { "id": "coordinator", "name": "Coordinator", "role": "Workflow Control", "trust": 84, "status": "HEALTHY", "color": "#22C55E", "working": "Routing tasks", "tools": ["send_message"], "actions_today": 220, "latency_ms": 60, "approved_tools": 4 },
+  { "id": "ledgerbot", "name": "LedgerBot", "role": "Reconciliation", "trust": 91, "status": "HEALTHY", "color": "#22C55E", "working": "Daily settle", "tools": ["post_entry"], "actions_today": 120, "latency_ms": 40, "approved_tools": 3 },
+  { "id": "fraudbot", "name": "FraudBot", "role": "Risk Detection", "trust": 48, "status": "THROTTLED", "color": "#EF4444", "working": "Anomaly scan", "tools": ["score_txn"], "actions_today": 90, "latency_ms": 200, "approved_tools": 2 }
+]

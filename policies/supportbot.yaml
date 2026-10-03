@@ -1,0 +1,19 @@
+# policies/supportbot.yaml
+# Owner: M2 (M4 reviews against how the agent really behaves)
+# This is SupportBot's "job description". Anything not listed is blocked (default-deny).
+agent: supportbot
+allow_tools: [read_ticket, issue_refund]
+max_per_minute: 20            # speed limit for the WHOLE agent (any tool)
+untrusted_sources: [read_ticket]   # reading these makes the agent "tainted" for a while
+constraints:
+  issue_refund:
+    max_amount: 500           # hard limit: above this is BLOCKED
+    max_per_hour: 10          # speed limit for this tool (counts refunds that really ran)
+    max_per_minute: 20
+    untrusted_max_amount: 100 # PROPOSED: after untrusted input, bigger refunds are HELD (400 held, 50 allowed)
+can_talk_to: [coordinator]
+deny_if:
+  # Implemented by taint.py: HOLD (a human approves) instead of a flat block.
+  - after: read_ticket_from_untrusted_source
+    then: issue_refund
+    unless: human_approved

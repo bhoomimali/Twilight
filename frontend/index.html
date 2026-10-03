@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Twinity Bank · Twilight</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="logo"><div class="logo-mark">T</div><span>Twinity Bank</span></div>
+      <div class="nav-section">Workspace</div>
+      <button class="nav-item active" data-view="overview">🏠 <span class="label">Overview</span></button>
+      <button class="nav-item" data-view="customers">👥 <span class="label">Customers</span></button>
+      <div class="nav-section">Intelligence</div>
+      <button class="nav-item" data-view="twilight">✦ <span class="label">Twilight</span> <span class="dot">Live</span></button>
+      <div class="sidebar-foot">
+        <div class="avatar-sm">AN</div>
+        <div>
+          <div style="font-weight:600;font-size:13px">Ananya N</div>
+          <div style="font-size:11px;color:var(--muted)">Operations admin</div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <input class="search" placeholder="Search anything" />
+        <div class="topbar-right">
+          <div class="status-chip" id="statusChip"><i></i> <span>Systems operational</span></div>
+          <button id="modeBtn" class="mode-btn off" title="Toggle Twilight guard">TWILIGHT · OFF</button>
+          <button id="resetBtn" class="attack-btn ghost" title="Fresh bank, fresh trust scores, empty audit log">Reset</button>
+          <button id="attackBtn" class="attack-btn">Run attack</button>
+        </div>
+      </header>
+
+      <div class="content">
+        <!-- OVERVIEW -->
+        <section id="view-overview" class="view active">
+          <div class="hero">
+            <div class="hero-kicker">Digital banking · India</div>
+            <h1>Twinity Bank</h1>
+            <p id="heroTag">A secure, modern banking network connecting customer wallets, cards, and financial operations across India.</p>
+            <div class="hero-pills">
+              <span id="pillCustomers">1,284 customers</span>
+              <span>99.99% uptime</span>
+              <span>₹12.68L managed</span>
+            </div>
+            <div class="hero-actions">
+              <button>↓ Deposit</button>
+              <button class="ghost">↑ Withdraw</button>
+            </div>
+          </div>
+
+          <div class="cards">
+            <div class="card">
+              <h3>Total balance</h3>
+              <div class="balance-big" id="kpiBalance">₹12,68,040.00</div>
+              <div class="delta" id="kpiDelta">↑ 8.4% vs last month</div>
+              <div class="mini-chart"></div>
+              <div style="margin-top:12px;display:flex;gap:8px">
+                <button style="padding:8px 14px;border-radius:10px;background:#f1f5f9;font-weight:600;font-size:12px">↓ Deposit</button>
+                <button style="padding:8px 14px;border-radius:10px;background:#0f172a;color:#fff;font-weight:600;font-size:12px">↑ Send</button>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Today's volume</h3>
+              <div class="stat-val" id="kpiVolume">₹8,42,920</div>
+              <div class="delta">↑ 12.1% from yesterday</div>
+              <div class="bars" id="volBars"></div>
+            </div>
+            <div class="card">
+              <h3>Active customers</h3>
+              <div class="stat-val" id="kpiActive">1,284</div>
+              <div class="delta">+24 this month</div>
+              <div style="margin-top:16px;display:flex;gap:6px">
+                <span class="av" style="background:#8B5CF6">AS</span>
+                <span class="av" style="background:#3B82F6">AM</span>
+                <span class="av" style="background:#EC4899">PN</span>
+                <span class="av" style="background:#14B8A6">RG</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile">
+            <div class="profile-head">
+              <div>
+                <div style="font-weight:700">Bank profile</div>
+                <div style="font-size:12px;color:var(--muted)">Institutional overview · demonstration data</div>
+              </div>
+              <span class="pill-ok">Operating normally</span>
+            </div>
+            <div class="profile-grid">
+              <div class="cell">Registered office<b id="bankOffice">Bengaluru, Karnataka</b></div>
+              <div class="cell">Bank code<b id="bankCode">TWIN0001204</b></div>
+              <div class="cell">Total deposits<b>₹248.6 Cr</b></div>
+              <div class="cell">Gross advances<b>₹182.4 Cr</b></div>
+              <div class="cell">Capital adequacy<b>17.8%</b></div>
+            </div>
+          </div>
+          <p class="hint">
+            <strong>Demo:</strong> Guard OFF → Run attack → balance drops.
+            Guard ON → Run attack → balance stable; open <em>Twilight</em> for BLOCK logs.
+            Agent conversation stays in the <code>terminal</code> (gateway logger).
+          </p>
+        </section>
+
+        <!-- CUSTOMERS -->
+        <section id="view-customers" class="view">
+          <div class="page-title">Customers</div>
+          <div class="page-sub">Manage accounts, balances, and customer activity.</div>
+          <div class="table-card">
+            <table>
+              <thead>
+                <tr><th>Customer</th><th>Account</th><th>Balance</th><th>Status</th></tr>
+              </thead>
+              <tbody id="custTable"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- TWILIGHT -->
+        <section id="view-twilight" class="view">
+          <div class="tw-top">
+            <div class="tw-metric"><div class="l">Network trust score</div><div class="n" id="metricTrust">79<span style="font-size:14px;color:var(--tw-muted)">/100</span></div><span class="tag caution" id="metricTrustTag">Caution</span></div>
+            <div class="tw-metric"><div class="l">Actions intercepted</div><div class="n" id="metricBlocks">0</div><span class="tag ok">Today</span></div>
+            <div class="tw-metric"><div class="l">Verified audit depth</div><div class="n" id="metricAudit">#1,052</div><span class="tag ok" id="metricAuditTag">Chain intact</span></div>
+            <div class="tw-metric"><div class="l">Guard mode</div><div class="n" id="metricMode">OFF</div><span class="tag caution" id="metricModeTag">Unchecked</span></div>
+          </div>
+          <div class="tw-grid">
+            <div class="tw-panel">
+              <h3>Agent constellation · Live topology</h3>
+              <div class="constellation" id="constellation">
+                <svg class="svg-links" id="links"></svg>
+                <div class="center-node">Twilight<br/>Core</div>
+              </div>
+            </div>
+            <div class="tw-panel agent-detail" id="agentDetail">
+              <div class="name">Select an agent</div>
+              <div class="role">Click a node in the constellation</div>
+            </div>
+          </div>
+          <div class="stream">
+            <h3>Recent actions · live decisions</h3>
+            <div id="streamBody">
+              <div class="s-row"><span>✓</span><div><div class="tool">system</div><div class="desc">Waiting for terminal traffic or Run attack…</div></div><span class="badge passed">idle</span><span style="color:var(--tw-muted)">—</span></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div class="drawer-backdrop" id="drawerBg"></div>
+  <aside class="drawer" id="drawer"></aside>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

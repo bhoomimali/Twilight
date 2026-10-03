@@ -1,0 +1,10 @@
+# policies/coordinator.yaml
+# Owner: M2. PROPOSED values, agree with M4.
+agent: coordinator
+allow_tools: [send_message]
+max_per_minute: 30
+constraints:
+  send_message:
+    max_per_minute: 30
+    scan: [card_numbers, outside_addresses]   # leak_filter.py scans the message text
+can_talk_to: [supportbot, databot]

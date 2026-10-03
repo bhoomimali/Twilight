@@ -1,0 +1,27 @@
+{
+  "TB-2048": [
+    { "id": "TX-1", "ts": "Today", "type": "debit", "label": "Third Wave Coffee", "amount": 480.00, "status": "completed" },
+    { "id": "TX-2", "ts": "23 Jan", "type": "credit", "label": "Salary credit", "amount": 84000.00, "status": "completed" },
+    { "id": "TX-3", "ts": "22 Jan", "type": "debit", "label": "Namma Metro", "amount": 62.00, "status": "completed" },
+    { "id": "TX-4", "ts": "21 Jan", "type": "debit", "label": "Amazon.in", "amount": 2499.00, "status": "completed" },
+    { "id": "TX-5", "ts": "20 Jan", "type": "debit", "label": "Swiggy", "amount": 356.00, "status": "completed" }
+  ],
+  "TB-1102": [
+    { "id": "TX-a", "ts": "Today", "type": "debit", "label": "UPI · Merchant", "amount": 1200.00, "status": "completed" },
+    { "id": "TX-b", "ts": "01 Oct", "type": "credit", "label": "Salary", "amount": 72000.00, "status": "completed" }
+  ],
+  "TB-3310": [
+    { "id": "TX-c", "ts": "Today", "type": "debit", "label": "Rent NEFT", "amount": 28000.00, "status": "completed" },
+    { "id": "TX-d", "ts": "28 Sep", "type": "credit", "label": "Client payment", "amount": 45000.00, "status": "completed" }
+  ],
+  "TB-4471": [
+    { "id": "TX-e", "ts": "Today", "type": "debit", "label": "Vendor payout", "amount": 15000.00, "status": "completed" },
+    { "id": "TX-f", "ts": "Demo", "type": "debit", "label": "SUSPECT refund attempt ₹9,000", "amount": 9000.00, "status": "blocked_by_twilight" }
+  ],
+  "TB-5120": [
+    { "id": "TX-g", "ts": "Today", "type": "credit", "label": "Interest credit", "amount": 210.00, "status": "completed" }
+  ],
+  "TB-6601": [
+    { "id": "TX-h", "ts": "Yesterday", "type": "debit", "label": "Fuel", "amount": 2500.00, "status": "completed" }
+  ]
+}
